@@ -1,4 +1,4 @@
-import Sidebar from "./../layouts/sidebar"
+import Sidebar from "./../layouts/Sidebar"
 import Navbar from "../../../shared/layouts/Navbar"
 import InputGood from "../../../shared/components/InputGood";
 import { AiFillInfoCircle } from "react-icons/ai"

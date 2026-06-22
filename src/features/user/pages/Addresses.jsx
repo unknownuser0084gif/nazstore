@@ -1,4 +1,4 @@
-import Sidebar from "./../layouts/sidebar"
+import Sidebar from "./../layouts/Sidebar"
 import Navbar from "./../../../shared/layouts/Navbar"
 import { BiLocationPlus } from "react-icons/bi"
 import { HiLocationMarker } from "react-icons/hi"
