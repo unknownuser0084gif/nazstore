@@ -1,0 +1,355 @@
+@import "tailwindcss";
+
+@font-face {
+       font-family: morabba-bold;
+       src: url("./assets/fonts/Morabba-Black.ttf");
+}
+
+@font-face {
+       font-family: morabba;
+       src: url("./assets/fonts/Morabba-Regular.ttf");
+}
+
+/* @font-face {
+     font-family: Tunisia;
+     src: url("./assets/fonts/Tunisia.ttf");
+} */
+
+@theme {
+       --color-box_primary: #2b7fff;
+       /* blue */
+       --color-box_secondary: #e3edf5;
+       /* blue light */
+       --color-text_primary: #181818;
+       /* black */
+       --color-text_secondary: #2b7fff;
+       /* blue */
+       --color-text_tertiary: #0ff;
+       /* gray */
+       --font-main-bold: morabba-bold;
+       --font-main: morabba;
+}
+
+/* Pure Styles*/
+input,
+textarea {
+       @apply transition-all duration-400 outline-white outline-1
+}
+
+input:focus, textarea:focus {
+       @apply outline-text_secondary
+}
+
+input::placeholder, textarea::placeholder {
+       @apply text-neutral-400 text-sm
+}
+
+.border-d {
+       @apply border border-dashed border-neutral-500
+}
+
+.size-box {
+       @apply w-14 h-10
+}
+
+.size-circle {
+       @apply w-14 h-14 rounded-full shadow-xl
+}
+
+.max-md\:size-circle-md {
+       @media (width < 48rem) {
+              @apply w-12 h-12 rounded-full shadow-xl
+       }
+
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+       display: none;
+}
+
+
+
+@keyframes fadeIn {
+       0% {
+              top: 1rem;
+       }
+
+       100% {
+              top: 0rem;
+       }
+}
+
+
+@keyframes fadeInBg {
+       0% {
+              opacity: 0;
+       }
+
+       100% {
+              opacity: 1;
+       }
+}
+
+.animate-fadeIn {
+       animation: fadeIn 0.4s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%);
+}
+
+.animate-fadeInBg {
+       animation: fadeInBg 0.25s ease-in-out
+}
+
+hr {
+       @apply border-neutral-400
+}
+
+.shadow-center {
+       @apply shadow-[0px_0px_12px_-2px_cadetblue];
+}
+
+
+/* ---------swiper----------- */
+.mySwiper2 .swiper-slide img {
+       display: block;
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+}
+
+.mySwiper2.swiper {
+       width: 100%;
+       height: 300px;
+       margin-left: auto;
+       margin-right: auto;
+       @apply shadow-[0px_0px_12px_-2px_cadetblue];
+}
+
+.mySwiper2 .swiper-slide {
+       background-size: cover;
+       background-position: center;
+}
+
+.mySwiper2 {
+       height: 100%;
+       width: 100%;
+       @apply select-none;
+       @apply rounded-lg overflow-hidden transition-all;
+}
+
+.mySwiper2 .swiper-slide {
+       @apply rounded-lg overflow-hidden transition-all;
+}
+
+.mySwiper {
+       height: 30%;
+       padding-block: 0.5rem;
+       @apply select-none mt-4;
+}
+
+.mySwiper .swiper-slide {
+       width: 25%;
+       height: 100%;
+       opacity: 0.6;
+       @apply rounded-lg overflow-hidden transition-all;
+       @apply shadow-[0px_0px_12px_-2px_cadetblue];
+}
+
+.mySwiper .swiper-slide-thumb-active {
+       opacity: 1;
+       @apply scale-110
+}
+
+.mySwiper .swiper-slide img {
+       display: block;
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+}
+
+/* ---------swiper----------- */
+/* ---------custom----------- */
+input[type="range"] {
+       width: 100%;
+       height: 6px;
+       background: linear-gradient(to right, #001eff, #009dff);
+       border-radius: 3px;
+       appearance: none;
+       cursor: pointer;
+       transition: background 0.3s ease;
+}
+
+
+.range {
+       @apply relative z-2
+}
+
+.range::-webkit-slider-thumb {
+       @apply appearance-none relative z-2 w-5 h-5 bg-blue-500 border-2 border-blue-500 rounded-full cursor-pointer transition-all duration-200;
+}
+
+.range::-webkit-slider-thumb:hover {
+       @apply scale-120 bg-white
+}
+
+.range::-moz-range-thumb:hover {
+       @apply scale-120 bg-white
+}
+
+.range::-moz-range-thumb {
+       @apply w-5 h-5 bg-blue-500 rounded-full cursor-pointer transition-all duration-200;
+}
+
+/* checkbox settings 👇 */
+
+.ui-checkbox {
+       --primary-color: #1677ff;
+       --secondary-color: #fff;
+       --primary-hover-color: #4096ff;
+       /* checkbox */
+       --checkbox-diameter: 20px;
+       --checkbox-border-radius: 5px;
+       --checkbox-border-color: #d9d9d9;
+       --checkbox-border-width: 1px;
+       --checkbox-border-style: solid;
+       /* checkmark */
+       --checkmark-size: 1.2;
+}
+
+.ui-checkbox,
+.ui-checkbox *,
+.ui-checkbox *::before,
+.ui-checkbox *::after {
+       -webkit-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+.ui-checkbox {
+       -webkit-appearance: none;
+       -moz-appearance: none;
+       appearance: none;
+       width: var(--checkbox-diameter);
+       height: var(--checkbox-diameter);
+       border-radius: var(--checkbox-border-radius);
+       background: var(--secondary-color);
+       border: var(--checkbox-border-width) var(--checkbox-border-style) var(--checkbox-border-color);
+       -webkit-transition: all 0.3s;
+       -o-transition: all 0.3s;
+       transition: all 0.3s;
+       cursor: pointer;
+       position: relative;
+}
+
+.ui-checkbox::after {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       -webkit-box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+       box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+       border-radius: inherit;
+       opacity: 0;
+       -webkit-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+       -o-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+       transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+}
+
+.ui-checkbox::before {
+       top: 40%;
+       left: 50%;
+       content: "";
+       position: absolute;
+       width: 4px;
+       height: 7px;
+       border-right: 2px solid var(--secondary-color);
+       border-bottom: 2px solid var(--secondary-color);
+       -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+       -ms-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+       transform: translate(-50%, -50%) rotate(45deg) scale(0);
+       opacity: 0;
+       -webkit-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+       -o-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+       transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+}
+
+/* actions */
+
+.ui-checkbox:hover {
+       border-color: var(--primary-color);
+}
+
+.ui-checkbox:checked {
+       background: var(--primary-color);
+       border-color: transparent;
+}
+
+.ui-checkbox:checked::before {
+       opacity: 1;
+       -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+       -ms-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+       transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+       -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+       -o-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+       transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+}
+
+.ui-checkbox:active:not(:checked)::after {
+       -webkit-transition: none;
+       -o-transition: none;
+       -webkit-box-shadow: none;
+       box-shadow: none;
+       transition: none;
+       opacity: 1;
+}
+
+/* ----ani--- */
+.ani {
+       animation: animation-loading linear infinite;
+       animation-duration: 0.5s;
+}
+
+@keyframes animation-loading {
+       0% {
+              opacity: 1;
+       }
+
+       50% {
+              opacity: 0.70;
+       }
+
+       100% {
+              opacity: 1;
+       }
+}
+
+/* ---ani---- */
+.input-control {
+       @apply border border-neutral-300 w-full rounded-lg p-2
+}
+
+.input-control-2 {
+       @apply border-b-2 border-neutral-300 w-full p-2 outline-0 focus:border-text_secondary
+}
+
+.shadow-trigger {
+       /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+       animation: shadow-palse 3s linear infinite;
+}
+
+@keyframes shadow-palse {
+       0% {
+              box-shadow: 0px 0px 18px -2px cadetblue;
+       }
+
+       50% {
+              box-shadow: 0px 0px 18px -2px rgb(235, 235, 235);
+       }
+
+       100% {
+              box-shadow: 0px 0px 18px -2px cadetblue;
+       }
+}
+
+.customPolygonColor polygon {
+       fill: white;
+}
