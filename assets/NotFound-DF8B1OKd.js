@@ -1,0 +1,1 @@
+import{j as o}from"./index-CWYPDF-0.js";import{N as r}from"./Navbar-Dwr1yHP7.js";import{F as t}from"./Footer-B-t42liC.js";import{N as m}from"./404-Bl7SSBRH.js";import"./Accordion-Co585ONu.js";import"./index-DZGXkQYZ.js";import"./iconBase-HCfHtc24.js";function f(){return o.jsxs(o.Fragment,{children:[o.jsx(r,{}),o.jsx(m,{}),o.jsx(t,{})]})}export{f as default};

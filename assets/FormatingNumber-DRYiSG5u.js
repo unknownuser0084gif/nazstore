@@ -1,0 +1,1 @@
+import{j as t}from"./index-CWYPDF-0.js";const o=({price:r,tomanSize:e="14px"})=>t.jsxs("span",{children:[Number(r).toLocaleString("fa"),"   ",t.jsx("span",{style:{fontSize:e},children:" تومان "})]}),s=r=>Number(r).toLocaleString("fa");export{o as F,s as a};
